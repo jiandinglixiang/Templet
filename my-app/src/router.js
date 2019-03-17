@@ -6,9 +6,8 @@ import { connect } from 'react-redux'
 function RouterRoot (props) {
   const style = {
     'display': 'flex',
-    'flexFlow': 'row',
     'margin': '0 auto',
-    'height': `${ props.minHeight }px`,
+    'minHeight': `${ props.minHeight }px`,
     'width': `${ props.minWidth }px`,
     'backgroundColor': '#fff'
   }
@@ -18,7 +17,7 @@ function RouterRoot (props) {
       <div style={ style }>
         <Switch>
           <Route path="/index" component={ App }/>
-          <Route exact path="/index2" component={ (App) => (<div>321321</div>) }/>
+          <Route path="/index2" component={ (App) => (<div>321321</div>) }/>
           <Redirect to="/index"/>
         </Switch>
       </div>
